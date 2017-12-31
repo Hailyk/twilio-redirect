@@ -1,10 +1,10 @@
 'use strict';
 const config = require('./config.json');
 
-const accountSid = config.accountSid;
-const authToken = config.authToken;
-const phoneNumber = config.phoneNumber;
-const ownerNumber = config.ownerNumber;
+const accountSid = process.env.accountSid||config.accountSid;
+const authToken = process.env.authToken||config.authToken;
+const phoneNumber = process.env.phoneNumber||config.phoneNumber;
+const ownerNumber = process.env.ownerNumber||config.ownerNumber;
 
 const port = process.env.PORT;
 
